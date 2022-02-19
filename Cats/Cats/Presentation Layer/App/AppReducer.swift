@@ -8,5 +8,6 @@
 import ReSwift
 
 func appReducer(action: Action, state: AppState?) -> AppState {
-    return AppState(catListState: catListReducer(action: action, state: state?.catListState))
+    return AppState(catListState: catListReducer(action: action, state: state?.catListState),
+                    catDetailState: catDetailReducer(action: action, state: state?.catDetailState))
 }

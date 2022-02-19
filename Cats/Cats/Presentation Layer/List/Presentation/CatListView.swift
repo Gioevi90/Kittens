@@ -26,7 +26,10 @@ struct CatListView: View {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 16) {
                         ForEach(viewModel.list, id: \.identifier) { item in
-                            CatCell(url: item.imageUrl, size: size)
+                            NavigationLink(destination: DetailView(identifier: item.identifier,
+                                                                   store: viewModel.store)) {
+                                CatCell(url: item.imageUrl, size: size)
+                            }
                         }
                     }
                     .padding(.horizontal, 8)

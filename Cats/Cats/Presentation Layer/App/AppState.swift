@@ -9,4 +9,5 @@ import ReSwift
 
 struct AppState {
     let catListState: CatListState
+    let catDetailState: DetailState
 }

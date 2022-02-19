@@ -27,6 +27,14 @@
 		2B59881027C11FBE00E79510 /* ReSwiftThunk in Frameworks */ = {isa = PBXBuildFile; productRef = 2B59880F27C11FBE00E79510 /* ReSwiftThunk */; };
 		2B59881327C1256100E79510 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881227C1256100E79510 /* Result+Extensions.swift */; };
 		2B59881627C125B000E79510 /* CatListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881527C125B000E79510 /* CatListRequest.swift */; };
+		2B59881A27C1347F00E79510 /* DetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881927C1347F00E79510 /* DetailReducer.swift */; };
+		2B59881C27C1348700E79510 /* DetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881B27C1348700E79510 /* DetailState.swift */; };
+		2B59881E27C1349000E79510 /* DetailAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881D27C1349000E79510 /* DetailAction.swift */; };
+		2B59882227C134B200E79510 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882127C134B200E79510 /* DetailView.swift */; };
+		2B59882427C1363A00E79510 /* CatDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882327C1363A00E79510 /* CatDetailRequest.swift */; };
+		2B59882627C1399E00E79510 /* CatDetailDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882527C1399E00E79510 /* CatDetailDto.swift */; };
+		2B59882827C13C2600E79510 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882727C13C2600E79510 /* DetailViewModel.swift */; };
+		2B59882A27C1403300E79510 /* CatDetailPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882927C1403300E79510 /* CatDetailPresentationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +76,14 @@
 		2B59880C27C11BF100E79510 /* CatPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPresentationModel.swift; sourceTree = "<group>"; };
 		2B59881227C1256100E79510 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
 		2B59881527C125B000E79510 /* CatListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListRequest.swift; sourceTree = "<group>"; };
+		2B59881927C1347F00E79510 /* DetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReducer.swift; sourceTree = "<group>"; };
+		2B59881B27C1348700E79510 /* DetailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailState.swift; sourceTree = "<group>"; };
+		2B59881D27C1349000E79510 /* DetailAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAction.swift; sourceTree = "<group>"; };
+		2B59882127C134B200E79510 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		2B59882327C1363A00E79510 /* CatDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailRequest.swift; sourceTree = "<group>"; };
+		2B59882527C1399E00E79510 /* CatDetailDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailDto.swift; sourceTree = "<group>"; };
+		2B59882727C13C2600E79510 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		2B59882927C1403300E79510 /* CatDetailPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailPresentationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +185,11 @@
 		2B5987F227C1040E00E79510 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				2B59882027C1349D00E79510 /* Models */,
+				2B59881F27C1349700E79510 /* Presentation */,
+				2B59881927C1347F00E79510 /* DetailReducer.swift */,
+				2B59881B27C1348700E79510 /* DetailState.swift */,
+				2B59881D27C1349000E79510 /* DetailAction.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -216,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				2B59880827C10F0700E79510 /* CatDto.swift */,
+				2B59882527C1399E00E79510 /* CatDetailDto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,8 +262,26 @@
 			isa = PBXGroup;
 			children = (
 				2B59881527C125B000E79510 /* CatListRequest.swift */,
+				2B59882327C1363A00E79510 /* CatDetailRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		2B59881F27C1349700E79510 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2B59882127C134B200E79510 /* DetailView.swift */,
+				2B59882727C13C2600E79510 /* DetailViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2B59882027C1349D00E79510 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B59882927C1403300E79510 /* CatDetailPresentationModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,7 +422,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B59881C27C1348700E79510 /* DetailState.swift in Sources */,
 				2B59881327C1256100E79510 /* Result+Extensions.swift in Sources */,
+				2B59882627C1399E00E79510 /* CatDetailDto.swift in Sources */,
+				2B59882827C13C2600E79510 /* DetailViewModel.swift in Sources */,
+				2B59882227C134B200E79510 /* DetailView.swift in Sources */,
+				2B59881A27C1347F00E79510 /* DetailReducer.swift in Sources */,
 				2B5987FE27C1059C00E79510 /* AppReducer.swift in Sources */,
 				2B59880D27C11BF100E79510 /* CatPresentationModel.swift in Sources */,
 				2B59880327C107FA00E79510 /* CatListViewModel.swift in Sources */,
@@ -392,8 +437,11 @@
 				2B59881627C125B000E79510 /* CatListRequest.swift in Sources */,
 				2B5987F827C104BD00E79510 /* CatListAction.swift in Sources */,
 				2B5987F627C104B100E79510 /* CatListState.swift in Sources */,
+				2B59882427C1363A00E79510 /* CatDetailRequest.swift in Sources */,
 				2B59880727C10EAA00E79510 /* API.swift in Sources */,
 				2B59880927C10F0700E79510 /* CatDto.swift in Sources */,
+				2B59881E27C1349000E79510 /* DetailAction.swift in Sources */,
+				2B59882A27C1403300E79510 /* CatDetailPresentationModel.swift in Sources */,
 				2B5987F427C1049200E79510 /* CatListReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
