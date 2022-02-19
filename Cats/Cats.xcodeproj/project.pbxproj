@@ -14,6 +14,13 @@
 		2B02A6BF27C1034F003F0FEF /* CatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02A6BE27C1034F003F0FEF /* CatsTests.swift */; };
 		2B02A6C927C1034F003F0FEF /* CatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02A6C827C1034F003F0FEF /* CatsUITests.swift */; };
 		2B02A6CB27C1034F003F0FEF /* CatsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02A6CA27C1034F003F0FEF /* CatsUITestsLaunchTests.swift */; };
+		2B5987F427C1049200E79510 /* CatListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987F327C1049200E79510 /* CatListReducer.swift */; };
+		2B5987F627C104B100E79510 /* CatListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987F527C104B100E79510 /* CatListState.swift */; };
+		2B5987F827C104BD00E79510 /* CatListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987F727C104BD00E79510 /* CatListAction.swift */; };
+		2B5987FB27C1051C00E79510 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2B5987FA27C1051C00E79510 /* ReSwift */; };
+		2B5987FE27C1059C00E79510 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987FD27C1059C00E79510 /* AppReducer.swift */; };
+		2B59880027C105A200E79510 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987FF27C105A200E79510 /* AppState.swift */; };
+		2B59880327C107FA00E79510 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59880227C107FA00E79510 /* CatListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,12 @@
 		2B02A6C427C1034F003F0FEF /* CatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B02A6C827C1034F003F0FEF /* CatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsUITests.swift; sourceTree = "<group>"; };
 		2B02A6CA27C1034F003F0FEF /* CatsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B5987F327C1049200E79510 /* CatListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListReducer.swift; sourceTree = "<group>"; };
+		2B5987F527C104B100E79510 /* CatListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListState.swift; sourceTree = "<group>"; };
+		2B5987F727C104BD00E79510 /* CatListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListAction.swift; sourceTree = "<group>"; };
+		2B5987FD27C1059C00E79510 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		2B5987FF27C105A200E79510 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		2B59880227C107FA00E79510 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5987FB27C1051C00E79510 /* ReSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +108,9 @@
 		2B02A6AC27C1034D003F0FEF /* Cats */ = {
 			isa = PBXGroup;
 			children = (
-				2B5987F227C1040E00E79510 /* Detail */,
-				2B5987F127C1040400E79510 /* List */,
 				2B02A6AD27C1034D003F0FEF /* CatsApp.swift */,
-				2B02A6AF27C1034D003F0FEF /* CatListView.swift */,
+				2B59880527C1096100E79510 /* Presentation Layer */,
+				2B59880427C1093A00E79510 /* Data Layer */,
 				2B02A6B127C1034F003F0FEF /* Assets.xcassets */,
 				2B02A6B327C1034F003F0FEF /* Preview Content */,
 			);
@@ -132,6 +145,10 @@
 		2B5987F127C1040400E79510 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				2B59880127C107E400E79510 /* Presentation */,
+				2B5987F327C1049200E79510 /* CatListReducer.swift */,
+				2B5987F527C104B100E79510 /* CatListState.swift */,
+				2B5987F727C104BD00E79510 /* CatListAction.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -141,6 +158,41 @@
 			children = (
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		2B5987FC27C1059100E79510 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2B5987FD27C1059C00E79510 /* AppReducer.swift */,
+				2B5987FF27C105A200E79510 /* AppState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2B59880127C107E400E79510 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2B02A6AF27C1034D003F0FEF /* CatListView.swift */,
+				2B59880227C107FA00E79510 /* CatListViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2B59880427C1093A00E79510 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		2B59880527C1096100E79510 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				2B5987FC27C1059100E79510 /* App */,
+				2B5987F227C1040E00E79510 /* Detail */,
+				2B5987F127C1040400E79510 /* List */,
+			);
+			path = "Presentation Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +211,9 @@
 			dependencies = (
 			);
 			name = Cats;
+			packageProductDependencies = (
+				2B5987FA27C1051C00E79510 /* ReSwift */,
+			);
 			productName = Cats;
 			productReference = 2B02A6AA27C1034D003F0FEF /* Cats.app */;
 			productType = "com.apple.product-type.application";
@@ -231,6 +286,9 @@
 				Base,
 			);
 			mainGroup = 2B02A6A127C1034D003F0FEF;
+			packageReferences = (
+				2B5987F927C1051C00E79510 /* XCRemoteSwiftPackageReference "ReSwift" */,
+			);
 			productRefGroup = 2B02A6AB27C1034D003F0FEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -273,8 +331,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5987FE27C1059C00E79510 /* AppReducer.swift in Sources */,
+				2B59880327C107FA00E79510 /* CatListViewModel.swift in Sources */,
 				2B02A6B027C1034D003F0FEF /* CatListView.swift in Sources */,
+				2B59880027C105A200E79510 /* AppState.swift in Sources */,
 				2B02A6AE27C1034D003F0FEF /* CatsApp.swift in Sources */,
+				2B5987F827C104BD00E79510 /* CatListAction.swift in Sources */,
+				2B5987F627C104B100E79510 /* CatListState.swift in Sources */,
+				2B5987F427C1049200E79510 /* CatListReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +665,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2B5987F927C1051C00E79510 /* XCRemoteSwiftPackageReference "ReSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReSwift/ReSwift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B5987FA27C1051C00E79510 /* ReSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B5987F927C1051C00E79510 /* XCRemoteSwiftPackageReference "ReSwift" */;
+			productName = ReSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2B02A6A227C1034D003F0FEF /* Project object */;
 }

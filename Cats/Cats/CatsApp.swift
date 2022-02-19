@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import ReSwift
+
+var store = Store<AppState>(reducer: appReducer, state: nil)
 
 @main
 struct CatsApp: App {
     var body: some Scene {
         WindowGroup {
-            CatListView()
+            CatListView(store: store)
         }
     }
 }
