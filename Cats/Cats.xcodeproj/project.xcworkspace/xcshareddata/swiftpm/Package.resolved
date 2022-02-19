@@ -9,6 +9,15 @@
           "revision": "d240448910549947547feea887ee832f54841dd0",
           "version": null
         }
+      },
+      {
+        "package": "ReSwiftThunk",
+        "repositoryURL": "https://github.com/ReSwift/ReSwift-Thunk.git",
+        "state": {
+          "branch": null,
+          "revision": "5ee9816158a2115863b1458c66cf1be9e9143b39",
+          "version": "2.0.1"
+        }
       }
     ]
   },

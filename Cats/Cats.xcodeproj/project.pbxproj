@@ -21,6 +21,12 @@
 		2B5987FE27C1059C00E79510 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987FD27C1059C00E79510 /* AppReducer.swift */; };
 		2B59880027C105A200E79510 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987FF27C105A200E79510 /* AppState.swift */; };
 		2B59880327C107FA00E79510 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59880227C107FA00E79510 /* CatListViewModel.swift */; };
+		2B59880727C10EAA00E79510 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59880627C10EA900E79510 /* API.swift */; };
+		2B59880927C10F0700E79510 /* CatDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59880827C10F0700E79510 /* CatDto.swift */; };
+		2B59880D27C11BF100E79510 /* CatPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59880C27C11BF100E79510 /* CatPresentationModel.swift */; };
+		2B59881027C11FBE00E79510 /* ReSwiftThunk in Frameworks */ = {isa = PBXBuildFile; productRef = 2B59880F27C11FBE00E79510 /* ReSwiftThunk */; };
+		2B59881327C1256100E79510 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881227C1256100E79510 /* Result+Extensions.swift */; };
+		2B59881627C125B000E79510 /* CatListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881527C125B000E79510 /* CatListRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,11 @@
 		2B5987FD27C1059C00E79510 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		2B5987FF27C105A200E79510 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		2B59880227C107FA00E79510 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
+		2B59880627C10EA900E79510 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2B59880827C10F0700E79510 /* CatDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDto.swift; sourceTree = "<group>"; };
+		2B59880C27C11BF100E79510 /* CatPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPresentationModel.swift; sourceTree = "<group>"; };
+		2B59881227C1256100E79510 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
+		2B59881527C125B000E79510 /* CatListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B59881027C11FBE00E79510 /* ReSwiftThunk in Frameworks */,
 				2B5987FB27C1051C00E79510 /* ReSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +157,7 @@
 		2B5987F127C1040400E79510 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				2B59880B27C11BE400E79510 /* Models */,
 				2B59880127C107E400E79510 /* Presentation */,
 				2B5987F327C1049200E79510 /* CatListReducer.swift */,
 				2B5987F527C104B100E79510 /* CatListState.swift */,
@@ -181,6 +194,10 @@
 		2B59880427C1093A00E79510 /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
+				2B59881427C1259F00E79510 /* Requests */,
+				2B59881127C1255300E79510 /* Utils */,
+				2B59880A27C10F0B00E79510 /* Models */,
+				2B59880627C10EA900E79510 /* API.swift */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -193,6 +210,38 @@
 				2B5987F127C1040400E79510 /* List */,
 			);
 			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		2B59880A27C10F0B00E79510 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B59880827C10F0700E79510 /* CatDto.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B59880B27C11BE400E79510 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B59880C27C11BF100E79510 /* CatPresentationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B59881127C1255300E79510 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2B59881227C1256100E79510 /* Result+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2B59881427C1259F00E79510 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				2B59881527C125B000E79510 /* CatListRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +262,7 @@
 			name = Cats;
 			packageProductDependencies = (
 				2B5987FA27C1051C00E79510 /* ReSwift */,
+				2B59880F27C11FBE00E79510 /* ReSwiftThunk */,
 			);
 			productName = Cats;
 			productReference = 2B02A6AA27C1034D003F0FEF /* Cats.app */;
@@ -288,6 +338,7 @@
 			mainGroup = 2B02A6A127C1034D003F0FEF;
 			packageReferences = (
 				2B5987F927C1051C00E79510 /* XCRemoteSwiftPackageReference "ReSwift" */,
+				2B59880E27C11FBE00E79510 /* XCRemoteSwiftPackageReference "ReSwift-Thunk" */,
 			);
 			productRefGroup = 2B02A6AB27C1034D003F0FEF /* Products */;
 			projectDirPath = "";
@@ -331,13 +382,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B59881327C1256100E79510 /* Result+Extensions.swift in Sources */,
 				2B5987FE27C1059C00E79510 /* AppReducer.swift in Sources */,
+				2B59880D27C11BF100E79510 /* CatPresentationModel.swift in Sources */,
 				2B59880327C107FA00E79510 /* CatListViewModel.swift in Sources */,
 				2B02A6B027C1034D003F0FEF /* CatListView.swift in Sources */,
 				2B59880027C105A200E79510 /* AppState.swift in Sources */,
 				2B02A6AE27C1034D003F0FEF /* CatsApp.swift in Sources */,
+				2B59881627C125B000E79510 /* CatListRequest.swift in Sources */,
 				2B5987F827C104BD00E79510 /* CatListAction.swift in Sources */,
 				2B5987F627C104B100E79510 /* CatListState.swift in Sources */,
+				2B59880727C10EAA00E79510 /* API.swift in Sources */,
+				2B59880927C10F0700E79510 /* CatDto.swift in Sources */,
 				2B5987F427C1049200E79510 /* CatListReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,6 +731,14 @@
 				kind = branch;
 			};
 		};
+		2B59880E27C11FBE00E79510 /* XCRemoteSwiftPackageReference "ReSwift-Thunk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReSwift/ReSwift-Thunk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -682,6 +746,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B5987F927C1051C00E79510 /* XCRemoteSwiftPackageReference "ReSwift" */;
 			productName = ReSwift;
+		};
+		2B59880F27C11FBE00E79510 /* ReSwiftThunk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B59880E27C11FBE00E79510 /* XCRemoteSwiftPackageReference "ReSwift-Thunk" */;
+			productName = ReSwiftThunk;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

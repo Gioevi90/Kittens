@@ -11,8 +11,20 @@ import ReSwift
 class CatListViewModel: ObservableObject {
     let store: Store<AppState>
     
+    @Published var isLoading: Bool
+    @Published var list: [CatPresentationModel]
+    
     init(store: Store<AppState>) {
         self.store = store
+        
+        isLoading = store.state.catListState.loading
+        list = store.state.catListState.list
+    }
+}
+
+extension CatListViewModel {
+    func fetchList() {
+        store.dispatch(fetchCats)
     }
 }
 
@@ -30,6 +42,7 @@ extension CatListViewModel: StoreSubscriber {
     }
     
     func newState(state: CatListState) {
-        // do something with the new state
+        isLoading = state.loading
+        list = state.list
     }
 }

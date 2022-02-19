@@ -8,7 +8,9 @@
 import SwiftUI
 import ReSwift
 
-var store = Store<AppState>(reducer: appReducer, state: nil)
+var store = Store<AppState>(reducer: appReducer,
+                            state: nil,
+                            middleware: [catListMiddleware])
 
 @main
 struct CatsApp: App {

@@ -9,5 +9,7 @@ import Foundation
 import ReSwift
 
 struct CatListState {
-    
+    var list: [CatPresentationModel]
+    var error: Error?
+    var loading: Bool
 }
