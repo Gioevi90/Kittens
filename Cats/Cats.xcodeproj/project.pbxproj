@@ -21,20 +21,15 @@
 		2B5987FE27C1059C00E79510 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987FD27C1059C00E79510 /* AppReducer.swift */; };
 		2B59880027C105A200E79510 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987FF27C105A200E79510 /* AppState.swift */; };
 		2B59880327C107FA00E79510 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59880227C107FA00E79510 /* CatListViewModel.swift */; };
-		2B59880727C10EAA00E79510 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59880627C10EA900E79510 /* API.swift */; };
-		2B59880927C10F0700E79510 /* CatDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59880827C10F0700E79510 /* CatDto.swift */; };
 		2B59880D27C11BF100E79510 /* CatPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59880C27C11BF100E79510 /* CatPresentationModel.swift */; };
 		2B59881027C11FBE00E79510 /* ReSwiftThunk in Frameworks */ = {isa = PBXBuildFile; productRef = 2B59880F27C11FBE00E79510 /* ReSwiftThunk */; };
-		2B59881327C1256100E79510 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881227C1256100E79510 /* Result+Extensions.swift */; };
-		2B59881627C125B000E79510 /* CatListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881527C125B000E79510 /* CatListRequest.swift */; };
 		2B59881A27C1347F00E79510 /* DetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881927C1347F00E79510 /* DetailReducer.swift */; };
 		2B59881C27C1348700E79510 /* DetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881B27C1348700E79510 /* DetailState.swift */; };
 		2B59881E27C1349000E79510 /* DetailAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881D27C1349000E79510 /* DetailAction.swift */; };
 		2B59882227C134B200E79510 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882127C134B200E79510 /* DetailView.swift */; };
-		2B59882427C1363A00E79510 /* CatDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882327C1363A00E79510 /* CatDetailRequest.swift */; };
-		2B59882627C1399E00E79510 /* CatDetailDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882527C1399E00E79510 /* CatDetailDto.swift */; };
 		2B59882827C13C2600E79510 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882727C13C2600E79510 /* DetailViewModel.swift */; };
 		2B59882A27C1403300E79510 /* CatDetailPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882927C1403300E79510 /* CatDetailPresentationModel.swift */; };
+		2B59882F27C1782600E79510 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 2B59882E27C1782600E79510 /* Data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,19 +66,14 @@
 		2B5987FD27C1059C00E79510 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		2B5987FF27C105A200E79510 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		2B59880227C107FA00E79510 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
-		2B59880627C10EA900E79510 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		2B59880827C10F0700E79510 /* CatDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDto.swift; sourceTree = "<group>"; };
 		2B59880C27C11BF100E79510 /* CatPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPresentationModel.swift; sourceTree = "<group>"; };
-		2B59881227C1256100E79510 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
-		2B59881527C125B000E79510 /* CatListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListRequest.swift; sourceTree = "<group>"; };
 		2B59881927C1347F00E79510 /* DetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReducer.swift; sourceTree = "<group>"; };
 		2B59881B27C1348700E79510 /* DetailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailState.swift; sourceTree = "<group>"; };
 		2B59881D27C1349000E79510 /* DetailAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAction.swift; sourceTree = "<group>"; };
 		2B59882127C134B200E79510 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		2B59882327C1363A00E79510 /* CatDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailRequest.swift; sourceTree = "<group>"; };
-		2B59882527C1399E00E79510 /* CatDetailDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailDto.swift; sourceTree = "<group>"; };
 		2B59882727C13C2600E79510 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		2B59882927C1403300E79510 /* CatDetailPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailPresentationModel.swift; sourceTree = "<group>"; };
+		2B59882C27C177C300E79510 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Data; path = ../Data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +83,7 @@
 			files = (
 				2B59881027C11FBE00E79510 /* ReSwiftThunk in Frameworks */,
 				2B5987FB27C1051C00E79510 /* ReSwift in Frameworks */,
+				2B59882F27C1782600E79510 /* Data in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,10 +107,12 @@
 		2B02A6A127C1034D003F0FEF = {
 			isa = PBXGroup;
 			children = (
+				2B59882B27C177C200E79510 /* Packages */,
 				2B02A6AC27C1034D003F0FEF /* Cats */,
 				2B02A6BD27C1034F003F0FEF /* CatsTests */,
 				2B02A6C727C1034F003F0FEF /* CatsUITests */,
 				2B02A6AB27C1034D003F0FEF /* Products */,
+				2B59882D27C1782600E79510 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,7 +131,6 @@
 			children = (
 				2B02A6AD27C1034D003F0FEF /* CatsApp.swift */,
 				2B59880527C1096100E79510 /* Presentation Layer */,
-				2B59880427C1093A00E79510 /* Data Layer */,
 				2B02A6B127C1034F003F0FEF /* Assets.xcassets */,
 				2B02A6B327C1034F003F0FEF /* Preview Content */,
 			);
@@ -212,17 +204,6 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		2B59880427C1093A00E79510 /* Data Layer */ = {
-			isa = PBXGroup;
-			children = (
-				2B59881427C1259F00E79510 /* Requests */,
-				2B59881127C1255300E79510 /* Utils */,
-				2B59880A27C10F0B00E79510 /* Models */,
-				2B59880627C10EA900E79510 /* API.swift */,
-			);
-			path = "Data Layer";
-			sourceTree = "<group>";
-		};
 		2B59880527C1096100E79510 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,38 +214,12 @@
 			path = "Presentation Layer";
 			sourceTree = "<group>";
 		};
-		2B59880A27C10F0B00E79510 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2B59880827C10F0700E79510 /* CatDto.swift */,
-				2B59882527C1399E00E79510 /* CatDetailDto.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		2B59880B27C11BE400E79510 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				2B59880C27C11BF100E79510 /* CatPresentationModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		2B59881127C1255300E79510 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				2B59881227C1256100E79510 /* Result+Extensions.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		2B59881427C1259F00E79510 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-				2B59881527C125B000E79510 /* CatListRequest.swift */,
-				2B59882327C1363A00E79510 /* CatDetailRequest.swift */,
-			);
-			path = Requests;
 			sourceTree = "<group>";
 		};
 		2B59881F27C1349700E79510 /* Presentation */ = {
@@ -282,6 +237,21 @@
 				2B59882927C1403300E79510 /* CatDetailPresentationModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2B59882B27C177C200E79510 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2B59882C27C177C300E79510 /* Data */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		2B59882D27C1782600E79510 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +273,7 @@
 			packageProductDependencies = (
 				2B5987FA27C1051C00E79510 /* ReSwift */,
 				2B59880F27C11FBE00E79510 /* ReSwiftThunk */,
+				2B59882E27C1782600E79510 /* Data */,
 			);
 			productName = Cats;
 			productReference = 2B02A6AA27C1034D003F0FEF /* Cats.app */;
@@ -423,8 +394,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B59881C27C1348700E79510 /* DetailState.swift in Sources */,
-				2B59881327C1256100E79510 /* Result+Extensions.swift in Sources */,
-				2B59882627C1399E00E79510 /* CatDetailDto.swift in Sources */,
 				2B59882827C13C2600E79510 /* DetailViewModel.swift in Sources */,
 				2B59882227C134B200E79510 /* DetailView.swift in Sources */,
 				2B59881A27C1347F00E79510 /* DetailReducer.swift in Sources */,
@@ -434,12 +403,8 @@
 				2B02A6B027C1034D003F0FEF /* CatListView.swift in Sources */,
 				2B59880027C105A200E79510 /* AppState.swift in Sources */,
 				2B02A6AE27C1034D003F0FEF /* CatsApp.swift in Sources */,
-				2B59881627C125B000E79510 /* CatListRequest.swift in Sources */,
 				2B5987F827C104BD00E79510 /* CatListAction.swift in Sources */,
 				2B5987F627C104B100E79510 /* CatListState.swift in Sources */,
-				2B59882427C1363A00E79510 /* CatDetailRequest.swift in Sources */,
-				2B59880727C10EAA00E79510 /* API.swift in Sources */,
-				2B59880927C10F0700E79510 /* CatDto.swift in Sources */,
 				2B59881E27C1349000E79510 /* DetailAction.swift in Sources */,
 				2B59882A27C1403300E79510 /* CatDetailPresentationModel.swift in Sources */,
 				2B5987F427C1049200E79510 /* CatListReducer.swift in Sources */,
@@ -799,6 +764,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B59880E27C11FBE00E79510 /* XCRemoteSwiftPackageReference "ReSwift-Thunk" */;
 			productName = ReSwiftThunk;
+		};
+		2B59882E27C1782600E79510 /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

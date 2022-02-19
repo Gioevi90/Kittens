@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Data
 
 struct CatDetailPresentationModel {
     let identifier: String

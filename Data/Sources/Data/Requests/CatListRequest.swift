@@ -7,7 +7,7 @@
 
 import Foundation
 
-func fetchCatList(limit: Int = 100) async -> Result<[CatDto], Error> {
+public func fetchCatList(limit: Int = 100) async -> Result<[CatDto], Error> {
     await CatListRequest
         .create()
         .with(limit: limit)

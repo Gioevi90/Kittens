@@ -8,6 +8,7 @@
 import Foundation
 import ReSwift
 import ReSwiftThunk
+import Data
 
 func fetchCatDetail(identifier: String) -> Thunk<AppState> {
     return Thunk<AppState> { dispatch, getState in

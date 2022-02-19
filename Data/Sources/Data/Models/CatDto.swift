@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CatDto: Codable {
-    let id: String?
-    let url: String?
+public struct CatDto: Codable {
+    public let id: String?
+    public let url: String?
 }

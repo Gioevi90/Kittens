@@ -7,7 +7,7 @@
 
 import Foundation
 
-func fetchCatDetail(identifier: String) async -> Result<CatDetailDto, Error> {
+public func fetchCatDetail(identifier: String) async -> Result<CatDetailDto, Error> {
     await CatDetailRequest
         .create(identifier: identifier)
         .build()

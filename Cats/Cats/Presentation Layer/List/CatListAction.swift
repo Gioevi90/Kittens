@@ -7,6 +7,7 @@
 
 import ReSwift
 import ReSwiftThunk
+import Data
 
 let catListMiddleware: Middleware<AppState> = createThunkMiddleware()
 
