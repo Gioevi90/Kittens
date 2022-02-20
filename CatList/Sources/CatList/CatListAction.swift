@@ -9,9 +9,9 @@ import ReSwift
 import ReSwiftThunk
 import Data
 
-let catListMiddleware: Middleware<AppState> = createThunkMiddleware()
+public let catListMiddleware: Middleware<CatListState> = createThunkMiddleware()
 
-let fetchCats = Thunk<AppState> { dispatch, getState in
+let fetchCats = Thunk<CatListState> { dispatch, getState in
     dispatch(CatListAction.Fetch())
     Task { @MainActor in
         let list = await fetchCatList()

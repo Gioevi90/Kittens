@@ -6,6 +6,8 @@
 //
 
 import ReSwift
+import CatDetail
+import CatList
 
 func appReducer(action: Action, state: AppState?) -> AppState {
     return AppState(catListState: catListReducer(action: action, state: state?.catListState),

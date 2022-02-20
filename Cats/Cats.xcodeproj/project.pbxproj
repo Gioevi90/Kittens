@@ -8,28 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2B02A6AE27C1034D003F0FEF /* CatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02A6AD27C1034D003F0FEF /* CatsApp.swift */; };
-		2B02A6B027C1034D003F0FEF /* CatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02A6AF27C1034D003F0FEF /* CatListView.swift */; };
 		2B02A6B227C1034F003F0FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B02A6B127C1034F003F0FEF /* Assets.xcassets */; };
 		2B02A6B527C1034F003F0FEF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B02A6B427C1034F003F0FEF /* Preview Assets.xcassets */; };
 		2B02A6BF27C1034F003F0FEF /* CatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02A6BE27C1034F003F0FEF /* CatsTests.swift */; };
 		2B02A6C927C1034F003F0FEF /* CatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02A6C827C1034F003F0FEF /* CatsUITests.swift */; };
 		2B02A6CB27C1034F003F0FEF /* CatsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02A6CA27C1034F003F0FEF /* CatsUITestsLaunchTests.swift */; };
-		2B5987F427C1049200E79510 /* CatListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987F327C1049200E79510 /* CatListReducer.swift */; };
-		2B5987F627C104B100E79510 /* CatListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987F527C104B100E79510 /* CatListState.swift */; };
-		2B5987F827C104BD00E79510 /* CatListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987F727C104BD00E79510 /* CatListAction.swift */; };
-		2B5987FB27C1051C00E79510 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2B5987FA27C1051C00E79510 /* ReSwift */; };
 		2B5987FE27C1059C00E79510 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987FD27C1059C00E79510 /* AppReducer.swift */; };
 		2B59880027C105A200E79510 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5987FF27C105A200E79510 /* AppState.swift */; };
-		2B59880327C107FA00E79510 /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59880227C107FA00E79510 /* CatListViewModel.swift */; };
-		2B59880D27C11BF100E79510 /* CatPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59880C27C11BF100E79510 /* CatPresentationModel.swift */; };
-		2B59881027C11FBE00E79510 /* ReSwiftThunk in Frameworks */ = {isa = PBXBuildFile; productRef = 2B59880F27C11FBE00E79510 /* ReSwiftThunk */; };
-		2B59881A27C1347F00E79510 /* DetailReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881927C1347F00E79510 /* DetailReducer.swift */; };
-		2B59881C27C1348700E79510 /* DetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881B27C1348700E79510 /* DetailState.swift */; };
-		2B59881E27C1349000E79510 /* DetailAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59881D27C1349000E79510 /* DetailAction.swift */; };
-		2B59882227C134B200E79510 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882127C134B200E79510 /* DetailView.swift */; };
-		2B59882827C13C2600E79510 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882727C13C2600E79510 /* DetailViewModel.swift */; };
-		2B59882A27C1403300E79510 /* CatDetailPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B59882927C1403300E79510 /* CatDetailPresentationModel.swift */; };
 		2B59882F27C1782600E79510 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 2B59882E27C1782600E79510 /* Data */; };
+		2B59883227C188B900E79510 /* CatList in Frameworks */ = {isa = PBXBuildFile; productRef = 2B59883127C188B900E79510 /* CatList */; };
+		2B8EFF1A27E6401300DA04F0 /* Store in Frameworks */ = {isa = PBXBuildFile; productRef = 2B8EFF1927E6401300DA04F0 /* Store */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +40,6 @@
 /* Begin PBXFileReference section */
 		2B02A6AA27C1034D003F0FEF /* Cats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B02A6AD27C1034D003F0FEF /* CatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsApp.swift; sourceTree = "<group>"; };
-		2B02A6AF27C1034D003F0FEF /* CatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListView.swift; sourceTree = "<group>"; };
 		2B02A6B127C1034F003F0FEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B02A6B427C1034F003F0FEF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B02A6BA27C1034F003F0FEF /* CatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,20 +47,12 @@
 		2B02A6C427C1034F003F0FEF /* CatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B02A6C827C1034F003F0FEF /* CatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsUITests.swift; sourceTree = "<group>"; };
 		2B02A6CA27C1034F003F0FEF /* CatsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2B5987F327C1049200E79510 /* CatListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListReducer.swift; sourceTree = "<group>"; };
-		2B5987F527C104B100E79510 /* CatListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListState.swift; sourceTree = "<group>"; };
-		2B5987F727C104BD00E79510 /* CatListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListAction.swift; sourceTree = "<group>"; };
 		2B5987FD27C1059C00E79510 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		2B5987FF27C105A200E79510 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		2B59880227C107FA00E79510 /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
-		2B59880C27C11BF100E79510 /* CatPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPresentationModel.swift; sourceTree = "<group>"; };
-		2B59881927C1347F00E79510 /* DetailReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailReducer.swift; sourceTree = "<group>"; };
-		2B59881B27C1348700E79510 /* DetailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailState.swift; sourceTree = "<group>"; };
-		2B59881D27C1349000E79510 /* DetailAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAction.swift; sourceTree = "<group>"; };
-		2B59882127C134B200E79510 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		2B59882727C13C2600E79510 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
-		2B59882927C1403300E79510 /* CatDetailPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailPresentationModel.swift; sourceTree = "<group>"; };
 		2B59882C27C177C300E79510 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Data; path = ../Data; sourceTree = "<group>"; };
+		2B59883027C188AE00E79510 /* CatList */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CatList; path = ../CatList; sourceTree = "<group>"; };
+		2B59883327C18BD300E79510 /* CatDetail */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CatDetail; path = ../CatDetail; sourceTree = "<group>"; };
+		2B8EFF1827E63F5B00DA04F0 /* Store */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Store; path = ../Store; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B59881027C11FBE00E79510 /* ReSwiftThunk in Frameworks */,
-				2B5987FB27C1051C00E79510 /* ReSwift in Frameworks */,
+				2B8EFF1A27E6401300DA04F0 /* Store in Frameworks */,
 				2B59882F27C1782600E79510 /* Data in Frameworks */,
+				2B59883227C188B900E79510 /* CatList in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,30 +141,6 @@
 			path = CatsUITests;
 			sourceTree = "<group>";
 		};
-		2B5987F127C1040400E79510 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				2B59880B27C11BE400E79510 /* Models */,
-				2B59880127C107E400E79510 /* Presentation */,
-				2B5987F327C1049200E79510 /* CatListReducer.swift */,
-				2B5987F527C104B100E79510 /* CatListState.swift */,
-				2B5987F727C104BD00E79510 /* CatListAction.swift */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		2B5987F227C1040E00E79510 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				2B59882027C1349D00E79510 /* Models */,
-				2B59881F27C1349700E79510 /* Presentation */,
-				2B59881927C1347F00E79510 /* DetailReducer.swift */,
-				2B59881B27C1348700E79510 /* DetailState.swift */,
-				2B59881D27C1349000E79510 /* DetailAction.swift */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
 		2B5987FC27C1059100E79510 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,54 +150,21 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		2B59880127C107E400E79510 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				2B02A6AF27C1034D003F0FEF /* CatListView.swift */,
-				2B59880227C107FA00E79510 /* CatListViewModel.swift */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
 		2B59880527C1096100E79510 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
 				2B5987FC27C1059100E79510 /* App */,
-				2B5987F227C1040E00E79510 /* Detail */,
-				2B5987F127C1040400E79510 /* List */,
 			);
 			path = "Presentation Layer";
-			sourceTree = "<group>";
-		};
-		2B59880B27C11BE400E79510 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2B59880C27C11BF100E79510 /* CatPresentationModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		2B59881F27C1349700E79510 /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				2B59882127C134B200E79510 /* DetailView.swift */,
-				2B59882727C13C2600E79510 /* DetailViewModel.swift */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
-		2B59882027C1349D00E79510 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2B59882927C1403300E79510 /* CatDetailPresentationModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		2B59882B27C177C200E79510 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
 				2B59882C27C177C300E79510 /* Data */,
+				2B59883027C188AE00E79510 /* CatList */,
+				2B59883327C18BD300E79510 /* CatDetail */,
+				2B8EFF1827E63F5B00DA04F0 /* Store */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -271,9 +193,9 @@
 			);
 			name = Cats;
 			packageProductDependencies = (
-				2B5987FA27C1051C00E79510 /* ReSwift */,
-				2B59880F27C11FBE00E79510 /* ReSwiftThunk */,
 				2B59882E27C1782600E79510 /* Data */,
+				2B59883127C188B900E79510 /* CatList */,
+				2B8EFF1927E6401300DA04F0 /* Store */,
 			);
 			productName = Cats;
 			productReference = 2B02A6AA27C1034D003F0FEF /* Cats.app */;
@@ -348,8 +270,6 @@
 			);
 			mainGroup = 2B02A6A127C1034D003F0FEF;
 			packageReferences = (
-				2B5987F927C1051C00E79510 /* XCRemoteSwiftPackageReference "ReSwift" */,
-				2B59880E27C11FBE00E79510 /* XCRemoteSwiftPackageReference "ReSwift-Thunk" */,
 			);
 			productRefGroup = 2B02A6AB27C1034D003F0FEF /* Products */;
 			projectDirPath = "";
@@ -393,21 +313,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B59881C27C1348700E79510 /* DetailState.swift in Sources */,
-				2B59882827C13C2600E79510 /* DetailViewModel.swift in Sources */,
-				2B59882227C134B200E79510 /* DetailView.swift in Sources */,
-				2B59881A27C1347F00E79510 /* DetailReducer.swift in Sources */,
 				2B5987FE27C1059C00E79510 /* AppReducer.swift in Sources */,
-				2B59880D27C11BF100E79510 /* CatPresentationModel.swift in Sources */,
-				2B59880327C107FA00E79510 /* CatListViewModel.swift in Sources */,
-				2B02A6B027C1034D003F0FEF /* CatListView.swift in Sources */,
 				2B59880027C105A200E79510 /* AppState.swift in Sources */,
 				2B02A6AE27C1034D003F0FEF /* CatsApp.swift in Sources */,
-				2B5987F827C104BD00E79510 /* CatListAction.swift in Sources */,
-				2B5987F627C104B100E79510 /* CatListState.swift in Sources */,
-				2B59881E27C1349000E79510 /* DetailAction.swift in Sources */,
-				2B59882A27C1403300E79510 /* CatDetailPresentationModel.swift in Sources */,
-				2B5987F427C1049200E79510 /* CatListReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,39 +643,18 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		2B5987F927C1051C00E79510 /* XCRemoteSwiftPackageReference "ReSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReSwift/ReSwift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		2B59880E27C11FBE00E79510 /* XCRemoteSwiftPackageReference "ReSwift-Thunk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReSwift/ReSwift-Thunk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		2B5987FA27C1051C00E79510 /* ReSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2B5987F927C1051C00E79510 /* XCRemoteSwiftPackageReference "ReSwift" */;
-			productName = ReSwift;
-		};
-		2B59880F27C11FBE00E79510 /* ReSwiftThunk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2B59880E27C11FBE00E79510 /* XCRemoteSwiftPackageReference "ReSwift-Thunk" */;
-			productName = ReSwiftThunk;
-		};
 		2B59882E27C1782600E79510 /* Data */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Data;
+		};
+		2B59883127C188B900E79510 /* CatList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CatList;
+		};
+		2B8EFF1927E6401300DA04F0 /* Store */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Store;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

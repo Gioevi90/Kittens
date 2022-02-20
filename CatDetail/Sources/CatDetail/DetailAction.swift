@@ -8,9 +8,12 @@
 import Foundation
 import ReSwift
 import ReSwiftThunk
+import Data
 
-func fetchCatDetail(identifier: String) -> Thunk<AppState> {
-    return Thunk<AppState> { dispatch, getState in
+public let catDetailMiddleware: Middleware<DetailState> = createThunkMiddleware()
+
+func fetchCatDetail(identifier: String) -> Thunk<DetailState> {
+    return Thunk<DetailState> { dispatch, getState in
         dispatch(CatDetailAction.Fetch())
         Task { @MainActor in
             let detail = await fetchCatDetail(identifier: identifier)
@@ -24,7 +27,6 @@ func fetchCatDetail(identifier: String) -> Thunk<AppState> {
         }
     }
 }
-
 
 struct CatDetailAction: Action {}
 

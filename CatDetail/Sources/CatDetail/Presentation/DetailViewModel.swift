@@ -7,9 +7,10 @@
 
 import Foundation
 import ReSwift
+import Store
 
-class CatDetailViewModel: ObservableObject {
-    let store: Store<AppState>
+public class CatDetailViewModel: ObservableObject {
+    let store: LocalStore<DetailState, CatDetailViewModel>
     let identifier: String
     
     @Published var model: CatDetailPresentationModel?
@@ -24,14 +25,14 @@ class CatDetailViewModel: ObservableObject {
         model.map { "Breeds: \($0.breeds.map { $0.name }.joined(separator: ", "))" } ?? ""
     }
     
-    init(identifier: String, store: Store<AppState>) {
+    init(identifier: String, store: LocalStore<DetailState, CatDetailViewModel>) {
         self.store = store
         self.identifier = identifier
         
-        isLoading = store.state.catDetailState.loading
-        model = store.state.catDetailState.model
-        error = store.state.catDetailState.error
-        isError = store.state.catDetailState.error != nil
+        isLoading = store.state.loading
+        model = store.state.model
+        error = store.state.error
+        isError = store.state.error != nil
     }
 }
 
@@ -42,11 +43,11 @@ extension CatDetailViewModel {
 }
 
 extension CatDetailViewModel: StoreSubscriber {
-    typealias StoreSubscriberStateType = DetailState
+    public typealias StoreSubscriberStateType = DetailState
     
     func subscribeToStore() {
         store
-            .subscribe(self) { $0.select { $0.catDetailState } }
+            .subscribe(self) { $0.select { $0 } }
     }
     
     func unsubscribeFromStore() {
@@ -54,7 +55,7 @@ extension CatDetailViewModel: StoreSubscriber {
             .unsubscribe(self)
     }
     
-    func newState(state: DetailState) {
+    public func newState(state: DetailState) {
         isLoading = state.loading
         model = state.model
         error = state.error

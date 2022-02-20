@@ -6,6 +6,8 @@
 //
 
 import ReSwift
+import CatList
+import CatDetail
 
 struct AppState {
     let catListState: CatListState

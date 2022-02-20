@@ -8,7 +8,7 @@
 import Foundation
 import ReSwift
 
-struct CatListState {
+public struct CatListState {
     var list: [CatPresentationModel]
     var error: Error?
     var loading: Bool

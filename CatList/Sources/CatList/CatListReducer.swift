@@ -8,7 +8,7 @@
 import Foundation
 import ReSwift
 
-func catListReducer(action: Action, state: CatListState?) -> CatListState {
+public func catListReducer(action: Action, state: CatListState?) -> CatListState {
     var state = state ?? .init(list: [], error: nil, loading: false)
     
     switch action {

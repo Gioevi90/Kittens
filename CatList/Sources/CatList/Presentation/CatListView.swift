@@ -7,27 +7,31 @@
 
 import SwiftUI
 import ReSwift
+import CatDetail
+import Store
 
 let size = UIScreen.main.bounds.width / 2 - 16
 
-struct CatListView: View {
+public struct CatListView: View {
     @ObservedObject var viewModel: CatListViewModel
     
     let columns = [ GridItem(.fixed(size)),
                     GridItem(.fixed(size))]
     
-    init(store: Store<AppState>) {
-        viewModel = CatListViewModel(store: store)
+    public init(store: LocalStore<CatListState, CatListViewModel>,
+                detailStore: @escaping (LocalStore<CatListState, CatListViewModel>) -> LocalStore<DetailState, CatDetailViewModel>) {
+        viewModel = CatListViewModel(store: store,
+                                     detailStore: detailStore)
     }
     
-    var body: some View {
+    public var body: some View {
         NavigationView {
             VStack {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 16) {
                         ForEach(viewModel.list, id: \.identifier) { item in
                             NavigationLink(destination: DetailView(identifier: item.identifier,
-                                                                   store: viewModel.store)) {
+                                                                   store: viewModel.detailStore(viewModel.store))) {
                                 CatCell(url: item.imageUrl, size: size)
                             }
                         }
@@ -72,6 +76,15 @@ struct CatCell: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        CatListView(store: .init(reducer: appReducer, state: nil))
+        let catListStore = Store<CatListState>.init(reducer: catListReducer, state: nil)
+        let catDetailStore = Store<DetailState>.init(reducer: catDetailReducer, state: nil)
+        CatListView(store: .init(getState: { catListStore.state },
+                                 dispatchFunction: { catListStore.dispatch($0) },
+                                 subscribeFunction: { catListStore.subscribe($0) },
+                                 unsubscribeFunction: { catListStore.unsubscribe($0) }),
+                    detailStore: { _ in .init(getState: { catDetailStore.state },
+                                              dispatchFunction: { catDetailStore.dispatch($0) },
+                                              subscribeFunction: { catDetailStore.subscribe($0) },
+                                              unsubscribeFunction: { catDetailStore.unsubscribe($0) }) })
     }
 }

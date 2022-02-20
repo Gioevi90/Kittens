@@ -8,7 +8,7 @@
 import Foundation
 import ReSwift
 
-func catDetailReducer(action: Action, state: DetailState?) -> DetailState {
+public func catDetailReducer(action: Action, state: DetailState?) -> DetailState {
     var state = state ?? .init(loading: false, model: nil, error: nil)
     
     switch action {

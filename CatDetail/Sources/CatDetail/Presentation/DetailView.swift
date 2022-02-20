@@ -7,16 +7,17 @@
 
 import SwiftUI
 import ReSwift
+import Store
 
-struct DetailView: View {
+public struct DetailView: View {
     @ObservedObject var viewModel: CatDetailViewModel
     
-    init(identifier: String, store: Store<AppState>) {
+    public init(identifier: String, store: LocalStore<DetailState, CatDetailViewModel>) {
         viewModel = .init(identifier: identifier,
                           store: store)
     }
     
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             AsyncImage(url: viewModel.model.flatMap { URL(string: $0.imageUrl) }) { image in
                 image
@@ -48,6 +49,10 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(identifier: "id", store: .init(reducer: appReducer, state: nil))
+        let store = Store<DetailState>(reducer: catDetailReducer, state: nil)
+        DetailView(identifier: "id", store: .init(getState: { store.state },
+                                                  dispatchFunction: { store.dispatch($0) },
+                                                  subscribeFunction: { store.subscribe($0) },
+                                                  unsubscribeFunction: { store.unsubscribe($0) }))
     }
 }
