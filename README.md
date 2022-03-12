@@ -94,3 +94,7 @@ The <b>view</b> function consists in the creation of a new local store starting 
 The new local store must also be aware of each store change, so that it can update the state every time the global state changes. 
 
 This is necessary because otherwise there would be an issue in local state updating, resulting in a not working application.
+
+## References
+
+All the stuff described here is born following the Point-Free composable architecture videos. You can find the video references and the repo at https://github.com/pointfreeco/swift-composable-architecture.
