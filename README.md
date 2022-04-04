@@ -5,7 +5,7 @@ Sample Cat List Application written using ReSwift.
 
 # Introduction
 
-This application is a sample who shows the idea I had to modularize an application written using ReSwift.
+This application is a sample who shows a way that can be used to modularize an application written using ReSwift.
 The repository contains 2 different branches:
 
 * <b>develop</b>: contains the not modularized version of the application, the one who needs to be refactored
@@ -15,13 +15,11 @@ The repository contains 2 different branches:
 
 The steps to modularize the application are:
 
-1. create the pullback function to convert the middlewares from localState to globalState, in order to assign it to the store during its instantiation.
+1. create the pullback function to convert the Middlewares from LocalState to GlobalState, in order to assign it to the store during its instantiation.
 
-2. create a new Store with the following constraints:
-    * a public and published state variable
-    * a public cancellable variable
+2. create a Store wrapper class focused on the LocalState instead of the global one.
 
-3. create the view function into your new store, which transforms the stores from globalState to localState, in order to assign them to the views.
+3. create the view extension function for the Store, which computes a new LocalStore focused on some LocalState
 
 ## Pullback function for Middlewares
 
@@ -53,47 +51,77 @@ func pullback<GlobalState, LocalState>(input: @escaping Middleware<LocalState>,
     }
 }
 ```
-## New Store Creation
+## Store Wrapper
 
-We need to create a new Store because the one provided by ReSwift does not admit any state modification. 
+We need to create a LocalStore wrapper in order to pass it to the submodules. The wrapper must wrap all the important functions of the store, that are:
 
-For semplicity ( and lazyness) I copy-pasted the one from ReSwift. This is a big workaround that can be avoided using generics and injecting the Store\<AppState> in every module. However, I decided to create a new store because my goal was to perform a real modularization of the code, instead of hide it using generics and protocols.
+* dispatch: needed to dispatch a new action
+* subscribe: needed to the views to subscribe to the state changes
+* unsubscribe: needed to the views to unsubscribe from the state changes
+* state: needed to get the current state
 
-The other solution is described in this solved issue:
+```
+public class LocalStore<State, S: StoreSubscriber> where State == S.StoreSubscriberStateType {
+    var dispatchFunction: DispatchFunction
+    var subscribeFunction: (S) -> Void
+    var unsubscribeFunction: (AnyStoreSubscriber) -> Void
+    var getState: () -> State
+    
+    public init(getState: @escaping () -> State,
+                dispatchFunction: @escaping DispatchFunction,
+                subscribeFunction: @escaping (S) -> Void,
+                unsubscribeFunction: @escaping (AnyStoreSubscriber) -> Void) {
+        self.getState = getState
+        self.dispatchFunction = dispatchFunction
+        self.subscribeFunction = subscribeFunction
+        self.unsubscribeFunction = unsubscribeFunction
+    }
+    
+    public var state: State {
+        getState()
+    }
+    
+    public func dispatch(_ action: Action) {
+        self.dispatchFunction(action)
+    }
+    
+    public func subscribe(_ subscriber: S) where S: StoreSubscriber, State == S.StoreSubscriberStateType {
+        subscribeFunction(subscriber)
+    }
+    
+    public func subscribe<SelectedState>(_ subscriber: S,
+                                  transform: ((ReSwift.Subscription<State>) -> ReSwift.Subscription<SelectedState>)?)
+    where SelectedState == S.StoreSubscriberStateType, S : StoreSubscriber {
+        subscribeFunction(subscriber)
+    }
+    
+    public func unsubscribe(_ subscriber: AnyStoreSubscriber) {
+        unsubscribeFunction(subscriber)
+    }
+    
+    public func dispatch(_ asyncActionCreator: Action, callback: ((State) -> Void)?) {}
+}
+```
+
+This is not the single solution to this problem. You can find another solution described in this solved issue:
 https://github.com/ReSwift/ReSwift/issues/377
-
-The new Store created is equal to the one in ReSwift, except of:
-
-* the state, which is public
-* the state, which is annotated with @Published
-* a new cancellable property to store the subscription
 
 ## Store view function
 
-Once the state is modifiable, I added a new function to the store, in order to convert a Store of GlobalState to a Store of LocalState, and passing it through the views.
+We can now add a new function to the store, in order to compute a LocalStore of LocalState from a Store of GlobalState, and passing it through the views.
 
 ```
-extension MyStore {
-    func view<LocalState>(state: KeyPath<State, LocalState>,
-                          defaultState: LocalState) -> MyStore<LocalState> {
-        let localStore = MyStore<LocalState>(reducer: { action, localState in
-            self.dispatch(action)
-            return self.state?[keyPath: state] ?? defaultState
-        }, state: self.state?[keyPath: state])
-        
-        localStore.cancellable = self.$state.sink { newState in
-            localStore.state = newState?[keyPath: state] ?? defaultState
-        }
-        return localStore
+public extension Store {
+    func view<LocalState, S: StoreSubscriber>(state: KeyPath<State, LocalState>) -> LocalStore<LocalState, S> where S.StoreSubscriberStateType == LocalState {
+        LocalStore<LocalState, S>(getState: { self.state[keyPath: state] },
+                                  dispatchFunction: { self.dispatch($0) },
+                                  subscribeFunction: { self.subscribe($0) { $0.select { $0[keyPath: state]  }} },
+                                  unsubscribeFunction: { self.unsubscribe($0) })
     }
 }
 ```
 
-The <b>view</b> function consists in the creation of a new local store starting from the global one. 
-
-The new local store must also be aware of each store change, so that it can update the state every time the global state changes. 
-
-This is necessary because otherwise there would be an issue in local state updating, resulting in a not working application.
+The <b>view</b> function consists in the creation of a new local store wrapper starting from the global one. 
 
 ## References
 
