@@ -1,5 +1,5 @@
-# Cats
-Sample Cat List Application written using ReSwift.
+# Kittens
+Sample Kittens List Application written using ReSwift.
 
 <img src="./.github/ezgif-5-1afad6a9df.gif" width="160" height="340" />
 
